@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import rdfParser from "rdf-parse";
 
 @Component({
   selector: 'app-root',
