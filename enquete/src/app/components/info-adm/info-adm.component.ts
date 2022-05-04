@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmailValidator, NgForm, NgModel } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { Identite } from 'src/app/models/identite.model';
 import { IdentiteService } from 'src/app/services/identite.service';
@@ -10,9 +11,9 @@ import { IdentiteService } from 'src/app/services/identite.service';
   styleUrls: ['./info-adm.component.css']
 })
 export class InfoAdmComponent implements OnInit {
-  router: any;
 
-  constructor(private identiteService: IdentiteService) { }
+
+  constructor(private router : Router,private identiteService: IdentiteService,private route: ActivatedRoute) { }
 
   fonctions = [
     "Directeur d'unité et/ou Responsable administratif",
@@ -53,9 +54,9 @@ export class InfoAdmComponent implements OnInit {
     console.log(this.fonctions[1])
     console.log("SELECTED"+ this.selectedFonction)
     
-    this.identiteService.createIdentite(f.value).//,this.listeIngredientsFinal)
-      then(() => f.reset());
-    //this.router.navigate(['/']);
+    this.identiteService.createIdentite(f.value)//,this.listeIngredientsFinal)
+      //then(() => f.reset());
+      this.router.navigate(['/conclusion']);
    
     
   }
