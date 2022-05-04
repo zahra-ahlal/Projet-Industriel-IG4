@@ -11,9 +11,9 @@ body {
 	width: 100%;
 	display: flex;
     flex-direction: column;
-    background-color: #DFDBE5;
-    background-image: url("https://wallpaperaccess.com/full/3063067.png");
-    color:#963E7B;
+    background: linear-gradient(#8cd7fa, #c0d9e7,#f9fafc);
+    /*background-image: url("https://wallpaperaccess.com/full/3063067.png");
+    color:#963E7B;*/
 }
 
 .card {
@@ -31,7 +31,7 @@ body {
 }
 
 .leftside {
-	background: #030303;
+	background: #e9e9e9;
 	width: 25rem;
 	display: inline-flex;
     align-items: center;
@@ -42,9 +42,9 @@ body {
 
 .product {
     object-fit: cover;
-	width: 20em;
-    height: 20em;
-    border-radius: 100%;
+	width: 30em;
+    height: 30em;
+    border-radius: 70%;
 }
 
 .rightside {
@@ -78,31 +78,26 @@ p{
   outline:none;
 }
 
-.expcvv {
+
+.identite{
     display:flex;
     justify-content: space-between;
     padding-top: 0.6rem;
 }
 
-.expcvv_text{
-    padding-right: 1rem;
-}
-.expcvv_text2{
-    padding:0 1rem;
-}
-
 .button{
     background: linear-gradient(
 135deg
-, #753370 0%, #298096 100%);
+, #333a75 0%, #298096 100%);
     padding: 15px;
     border: none;
-    border-radius: 50px;
+    border-radius: 20px;
     color: white;
     font-weight: 400;
     font-size: 1.2rem;
     margin-top: 10px;
-    width:100%;
+    margin-left: 25%;
+    width:50%;
     letter-spacing: .11rem;
     outline:none;
 }

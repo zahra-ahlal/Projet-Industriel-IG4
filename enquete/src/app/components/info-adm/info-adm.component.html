@@ -1,0 +1,73 @@
+
+    <div class="mainscreen">
+        <!-- <img src="https://image.freepik.com/free-vector/purple-background-with-neon-frame_52683-34124.jpg"  class="bgimg " alt="">--> 
+          <div class="card">
+            <div class="leftside">
+              <img
+                src="https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                class="product"
+                alt=""
+              />
+            </div>
+            <div class="rightside">
+              <form action="#" #infoForm="ngForm" (ngSubmit)="onSubmit(infoForm)" >
+                <h1>Enquête: Champs de compétences des instituts au sein du CNRS </h1>
+
+                <!-- Identité -->
+                <div class="identite">
+
+                    <input type="text" class="inputbox" name="name" ngModel #name="ngModel" placeholder="Votre Nom" required />
+                    <!--p>Prénom</p-->
+                    <input type="text" class="inputbox" name="name2" ngModel #name2="ngModel" placeholder="Votre Prénom" required />
+                </div>
+
+
+                <!--p>Email</p-->
+                <input type="text" class="inputbox" name="email" ngModel  #email="ngModel" placeholder="Votre Email" required />
+
+                <!--  Click here to select BMW as your favorite car:
+                    <input type="checkbox" ng-model="mySel">
+
+                    <p>My Favourite car:</p>
+
+                    <select>
+                    <option>Volvo</option>
+                    <option ng-selected="mySel">BMW</option>
+                    <option>Ford</option>
+                    </select>  -->
+
+                <!-- Fonction -->
+                <p>Fonction</p>
+                <select class="inputbox" name="fonction" [(ngModel)]="selectedFonction" ngModel  #fonction="ngModel" id="fonction" required>
+                  <!--option value="">--Veuillez sélectionner--</option-->
+                  <option *ngFor="let fct of fonctions" [value]="fct"  > {{fct}} </option>
+                </select>
+
+                <!-- Si Directeur d'unité -->
+                <div *ngIf="selectedFonction === this.fonctions[0]">
+                  <!--p> Numéro de l’unité </p-->
+                  <input type="text" class="inputbox" name="numEntite" ngModel  #numEntite="ngModel" placeholder="Numéro de l’unité" required />
+                  <!--p> Type de l'entité </p-->
+                    <p>Type Entité </p>
+                    <select class="inputbox" name="typeEntite" [(ngModel)]="selectedTypeEntite" ngModel  #typeEntite="ngModel" id="typeEntite" required>
+                      <!--option value="">--Veuillez sélectionner--</option-->
+                      <option *ngFor="let entite of entites" [value]="entite"  > {{entite}} </option>
+                    </select>
+
+                </div>
+
+
+                <!-- Si Type d'entité différente de unité complète ou Si Fonction differente de directeur d'unité  -->
+                <div *ngIf="selectedFonction!== undefined  && selectedFonction!== this.fonctions[0] || selectedTypeEntite!== undefined && selectedTypeEntite !== this.entites[0]">
+                  <!--p> Numéro de l’unité </p-->
+                  <input type="text" class="inputbox" name="noms" ngModel  #noms="ngModel" placeholder="Nom {{selectedTypeEntite}}" required />
+                </div>
+
+                <p></p>
+                <button type="submit" class="button">Etape Suivante</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      
+    
