@@ -9,12 +9,14 @@ import { InfoAdmComponent } from './components/info-adm/info-adm.component';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from "@angular/fire/compat/database";
+import { ConclusionComponent } from './components/conclusion/conclusion.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    InfoAdmComponent
+    InfoAdmComponent,
+    ConclusionComponent
   ],
   imports: [
     BrowserModule,
