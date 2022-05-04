@@ -15,7 +15,7 @@
 
                 <!-- Identité -->
                 <div class="identite">
-
+                    <!--p>Nom</p-->
                     <input type="text" class="inputbox" name="name" ngModel #name="ngModel" placeholder="Votre Nom" required />
                     <!--p>Prénom</p-->
                     <input type="text" class="inputbox" name="name2" ngModel #name2="ngModel" placeholder="Votre Prénom" required />
@@ -60,7 +60,7 @@
                 <!-- Si Type d'entité différente de unité complète ou Si Fonction differente de directeur d'unité  -->
                 <div *ngIf="selectedFonction!== undefined  && selectedFonction!== this.fonctions[0] || selectedTypeEntite!== undefined && selectedTypeEntite !== this.entites[0]">
                   <!--p> Numéro de l’unité </p-->
-                  <input type="text" class="inputbox" name="noms" ngModel  #noms="ngModel" placeholder="Nom {{selectedTypeEntite}}" required />
+                  <input type="text" class="inputbox" name="nomsTypeEntite" ngModel  #nomsTypeEntite="ngModel" placeholder="Nom {{selectedTypeEntite}}" required />
                 </div>
 
                 <p></p>
