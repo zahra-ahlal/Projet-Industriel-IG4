@@ -18,9 +18,13 @@
     "@angular/platform-browser": "~13.3.0",
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
+    "bootstrap": "^5.1.3",
     "rdf-parse": "^2.0.0",
+    "rdfxml-streaming-parser": "^1.5.0",
     "rxjs": "~7.5.0",
+    "timers": "^0.1.1",
     "tslib": "^2.3.0",
+    "xml2js": "^0.4.23",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
@@ -29,6 +33,7 @@
     "@angular/compiler-cli": "~13.3.0",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
+    "@types/sax": "^1.2.4",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",

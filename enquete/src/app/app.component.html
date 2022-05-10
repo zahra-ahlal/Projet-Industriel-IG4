@@ -1,3 +1,23 @@
-<div>
-  <h2 class="h1">Enquête</h2>
-</div> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class ="mainC">
+    <h1 class ="title">XML Parser</h1>
+    <button
+    class="api"
+    (click)="parseXml()">
+        Synthese
+    </button>
+    <div *ngFor="let item of items">
+        <h2>{{item}}</h2>
+    </div>
+</div>
+
+</body>
+</html>
