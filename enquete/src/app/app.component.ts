@@ -18,12 +18,10 @@ declare global {
 
 export class AppComponent {
 
-    constructor(
-        private ref:ChangeDetectorRef
-    ){
+    constructor(private ref:ChangeDetectorRef){}
 
-    }
     title = 'xmlParser';
+
     stringXml = `<?xml version="1.0" encoding="UTF-8"?>
     <SYNTHESE>
       <Chimiemoléculaire>
@@ -31,31 +29,88 @@ export class AppComponent {
           <Acidesnucléiques>
             <Amino></Amino>
           </Acidesnucléiques>
-        </Biomolécules>
-        <Polymères></Polymères>
+        </Biomolécules> 
+        <Polymères>
+          <Amino2></Amino2>
+        </Polymères>
       </Chimiemoléculaire>
-    </SYNTHESE>
-    `
+    </SYNTHESE>`
+
     items:Array<any> = []
+    xmlReady:any = parseXml(this.stringXml)
+
+    parsedFile : Array<any> = this.items = Array.from(this.xmlReady.querySelector("SYNTHESE").children).map((x:any,i)=>{
+      return x.tagName
+    })
 
     // practical application
-    parseXml:Function = ()=>{
-        let xmlReady:any;
-        xmlReady = parseXml(this.stringXml) // lis le contenu sous format xml
+    parseXml(){
+        console.log(this.xmlReady.querySelector("Chimiemoléculaire"));
 
         //renvoie le nom de les enfants de la racine / balise renseignée
-        this.items = Array.from(xmlReady.querySelector("Chimiemoléculaire").children).map((x:any,i)=>{
+        /*this.items = Array.from(this.xmlReady.querySelector("Chimiemoléculaire").children).map((x:any,i)=>{
             return x.tagName
-        })
+        })*/
+        console.log("FIN " + this.rechercheRec(this.items,"SYNTHESE"))
+        //this.rechercheRec(this.items,"Chimiemoléculaire");
         
-        let enfant = this.items[0]
-        this.items[0] = Array.from(xmlReady.querySelector("Biomolécules").children).map((x:any,i)=>{
-          return x.tagName
-        })
-        
-        console.log(enfant)
+        /*let i = 0;
+
+        for(i = 0; i<this.items.length;i++){
+
+          console.log("1er Niveau \n" + this.items[i]);
+
+          let niv2 = this.items[i];   
+
+          let j = 0
+
+          niv2 = Array.from(this.xmlReady.querySelector(niv2).children).map((x:any,i)=>{
+            return x.tagName
+          })
+
+          for(j = 0; j<niv2.length;j++){
+
+            console.log("2° Niv \n" + niv2[j])
+
+            let niv3 = Array.from(this.xmlReady.querySelector(niv2[j]).children).map((x:any,i)=>{
+              return x.tagName
+            })
+
+            console.log(this.feuille(niv3))                       
+
+          }
+        }*/
 
         this.ref.detectChanges()
+    }
+
+    rechercheRec(tab:any, filtre : String){
+
+      //CAS DE BASE
+      if(this.feuille(tab)){
+        return ""
+      }else{
+        //Au debut le filtre doit etre egale à la racine du coup ; this.xmlReady.querySelector(this.parsedFile[0]).children
+        tab = Array.from(this.xmlReady.querySelector(filtre).children).map((x:any,i)=>{
+          return x.tagName
+        })
+
+        let s=""
+        for(let i = 0; i<tab.length;i++){
+          s+=tab[i] + " - "
+          s+=this.rechercheRec(tab,tab[i])
+        }
+        //console.log("enfant :" + tab + " : "+s);
+        return s
+      }
+
+    }
+
+    feuille(element:any){
+      if(element.length<1)
+        return true
+      else 
+        return false
     }
     //
 }
