@@ -1,1 +1,12 @@
-<p>ontologie works!</p>
+<section>
+  <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+    <div *ngFor="let country of countries; let i=index">
+      <input type="checkbox" formArrayName="selectedCountries" [value]="country.value" (change)="onCheckboxChange($event)" 
+      />
+      {{ country.name}}
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+
+  <p>{{ form.value | json }}</p>
+</section>
