@@ -4,10 +4,15 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router'; // CLI imports router
 import { InfoAdmComponent } from './components/info-adm/info-adm.component';
 import { ConclusionComponent } from './components/conclusion/conclusion.component';
+import { AccesComponent } from './modals/acces/acces.component';
+
+import { AuthGuard } from './shared/guard/auth.guard';
+
 
 const routes: Routes = [
-  { path: 'info-administratives', component: InfoAdmComponent },
-  { path: 'conclusion', component: ConclusionComponent }
+  { path: 'info-administratives', component: InfoAdmComponent}, //canActivate: [AuthGuard] 
+  { path: 'conclusion', component: ConclusionComponent },
+  { path: 'acces', component: AccesComponent }
 ]; // sets up routes constant where you define your routes
 
 @NgModule({

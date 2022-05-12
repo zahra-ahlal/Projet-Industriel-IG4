@@ -10,13 +10,18 @@ import { InfoAdmComponent } from './components/info-adm/info-adm.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from "@angular/fire/compat/database";
 import { ConclusionComponent } from './components/conclusion/conclusion.component';
+import { AccesComponent } from './modals/acces/acces.component';
+
+import { AuthService } from "./services/auth.service";
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     InfoAdmComponent,
-    ConclusionComponent
+    ConclusionComponent,
+    AccesComponent
   ],
   imports: [
     BrowserModule,
@@ -24,9 +29,9 @@ import { ConclusionComponent } from './components/conclusion/conclusion.componen
     FormsModule,                               // <========== Add this line!
     //ReactiveFormsModule
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
