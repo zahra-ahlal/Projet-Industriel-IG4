@@ -1,4 +1,5 @@
 import { Component,ChangeDetectionStrategy,ChangeDetectorRef } from '@angular/core';
+import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 
 // make availbable your script import
@@ -18,7 +19,13 @@ declare global {
 
 export class AppComponent {
 
-    constructor(private ref:ChangeDetectorRef){}
+    form: FormGroup;
+
+    constructor(private ref:ChangeDetectorRef, fb: FormBuilder){
+      this.form = fb.group({
+        selectedCountries:  new FormArray([])
+       });
+    }
 
     title = 'xmlParser';
 
@@ -44,45 +51,12 @@ export class AppComponent {
     })
 
     // practical application
-    parseXml(){
+    /*parseXml(){
         console.log(this.xmlReady.querySelector("Chimiemoléculaire"));
-
-        //renvoie le nom de les enfants de la racine / balise renseignée
-        /*this.items = Array.from(this.xmlReady.querySelector("Chimiemoléculaire").children).map((x:any,i)=>{
-            return x.tagName
-        })*/
         console.log("FIN " + this.rechercheRec(this.items,"SYNTHESE"))
-        //this.rechercheRec(this.items,"Chimiemoléculaire");
-        
-        /*let i = 0;
-
-        for(i = 0; i<this.items.length;i++){
-
-          console.log("1er Niveau \n" + this.items[i]);
-
-          let niv2 = this.items[i];   
-
-          let j = 0
-
-          niv2 = Array.from(this.xmlReady.querySelector(niv2).children).map((x:any,i)=>{
-            return x.tagName
-          })
-
-          for(j = 0; j<niv2.length;j++){
-
-            console.log("2° Niv \n" + niv2[j])
-
-            let niv3 = Array.from(this.xmlReady.querySelector(niv2[j]).children).map((x:any,i)=>{
-              return x.tagName
-            })
-
-            console.log(this.feuille(niv3))                       
-
-          }
-        }*/
-
+    
         this.ref.detectChanges()
-    }
+    }*/
 
     rechercheRec(tab:any, filtre : String){
 
@@ -112,5 +86,40 @@ export class AppComponent {
       else 
         return false
     }
-    //
+    
+
+    skills = [''];
+
+    addSkill(filtre: string) {
+      if (filtre) {
+        this.items = Array.from(this.xmlReady.querySelector(filtre).children).map((x:any,i)=>{
+          return x.tagName
+        })
+        if(this.skills[0] == ''){
+          this.skills.pop();
+        }
+        for(let  i = 0; i< this.items.length; i++)
+          this.skills.push(this.items[i]);
+      }
+      //   Chimiemoléculaire
+    }
+
+    onCheckboxChange(event: any) {
+
+      const selectedSkills = (this.form.controls['selectedSkills'] as FormArray);
+      
+      if (event.target.checked) {
+        selectedSkills.push(new FormControl(event.target.value));
+      } else {
+        const index = selectedSkills.controls
+        .findIndex(x => x.value === event.target.value);
+        selectedSkills.removeAt(index);
+      }
+
+    }
+  
+    submit() {
+      console.log(this.form.value);
+
+    }
 }
