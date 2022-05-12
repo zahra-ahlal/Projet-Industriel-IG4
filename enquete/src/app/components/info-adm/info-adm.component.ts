@@ -57,8 +57,6 @@ export class InfoAdmComponent implements OnInit {
     this.identiteService.createIdentite(f.value)//,this.listeIngredientsFinal)
       //then(() => f.reset());
       this.router.navigate(['/conclusion']);
-   
-    
   }
 
 }
