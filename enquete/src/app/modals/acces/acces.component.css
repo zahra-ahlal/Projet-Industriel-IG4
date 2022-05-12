@@ -1,0 +1,22 @@
+body {
+    font-family: 'Roboto', sans-serif!important;
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+    width: 50%;
+}
+
+
+.test{
+    width: 855px;
+  margin:0 auto;
+  text-align: center;
+  z-index: 1;
+    margin: 30px;
+    background: green;
+}
+
+.access{
+    box-shadow: 3px 3px red, -1em 0 .4em olive;
+    border-radius: 8px;
+}

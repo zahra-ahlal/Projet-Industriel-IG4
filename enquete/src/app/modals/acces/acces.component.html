@@ -1,0 +1,58 @@
+<!--div class="test"> 
+    <h1>Accès à l'enqûete</h1>
+    <p>Veuillez saisir votre email afin de recevoir un lien d'accès à l'enqête</p>
+    <input class="access" type="text">
+</div-->
+
+<!--div class="displayTable">
+    <div class="displayTableCell">
+      <div class="authBlock">
+        <h3>Sign In</h3>
+        <div class="formGroup">
+          <input type="text" class="formControl" placeholder="Username" #userName required>
+        </div>
+        <div class="formGroup">
+          <input type="password" class="formControl" placeholder="Password" #userPassword required>
+        </div-->
+        <!-- Calling SignIn Api from AuthService -->
+        <!--div class="formGroup">
+          <input type="button" class="btn btnPrimary" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">
+        </div>
+        <div class="formGroup">
+          <span class="or"><span class="orInner">Or</span></span>
+        </div-->
+        <!-- Calling GoogleAuth Api from AuthService -->
+      <!--/div>
+      <div class="redirectToLogin">
+        <span>Don't have an account?<span class="redirect" routerLink="/register-user"> Sign Up</span></span>
+      </div>
+    </div>
+  </div-->
+
+  <!--ng-container *ngIf="user | async; else login">
+
+    Congrats You logged in without a password 
+
+    <!--button (click)="logout()">SignOut</button>
+
+  </ng-container-->
+
+
+  <div>
+    <input class="access" name="em"  type="email" [(ngModel)]="email" ngModel #em="ngModel" id="em">
+    <hr>
+
+
+    <button [disabled]="emailSent" (click)="sendEmailLink(email)"> Get Login Link </button>
+
+    <hr>
+
+    <div *ngIf="emailSent">
+
+      Cool! We sent you an email with your login Link
+
+    </div>
+
+  </div>
+  
+  
