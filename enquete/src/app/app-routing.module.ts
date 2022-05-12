@@ -12,7 +12,8 @@ import { AuthGuard } from './shared/guard/auth.guard';
 const routes: Routes = [
   { path: 'info-administratives', component: InfoAdmComponent}, //canActivate: [AuthGuard] 
   { path: 'conclusion', component: ConclusionComponent },
-  { path: 'acces', component: AccesComponent }
+  { path: 'acces', component: AccesComponent },
+  {path: '**', component: AccesComponent}
 ]; // sets up routes constant where you define your routes
 
 @NgModule({
