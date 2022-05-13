@@ -17,19 +17,13 @@
         <div *ngFor="let item of items">
             <h2>{{item}}</h2>
         </div>
+
+        crypter et decrypter les données avec une cles
+
     </div-->
 
 
-
-
-
-
-
-
-
-
     <div style = "margin : 30px">
-
               
         <!--ul><li *ngFor="let skill of skills"><input type="checkbox" formControlName="checked" /> {{skill}}</li></ul-->
 
@@ -41,18 +35,29 @@
             <button type="button" (click)="addSkill(filtre.value)">Chercher</button>
 
             <div *ngFor="let skill of skills; let i=index">
-              <input type="checkbox" formArrayName="selectedSkills" (change)="onCheckboxChange($event)" />
+              <input type="checkbox" value={{skill}} formArrayName="selectedSkills" (change)="onCheckboxChange($event)" />
               {{skill}}
             </div>
+
+            <table *ngFor="let skill of form.value['selectedSkills']; let i=index">
+                <tr>{{skill}}</tr>
+                <tr *ngFor="let child of getChildren(skill)">
+                    {{child}}
+                </tr>
+            </table>
+
             <button type="submit">Submit</button>
         </form>
-        
-         <p>{{ form.value | json }}</p>
+         
+    </div>
 
+
+    <div style = "margin : 30px">
+        <p>{{ form.value | json }}</p>
     </div>
 
     <!--div>
-
+        
         <section>
 
             <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
@@ -69,6 +74,7 @@
 
     </div-->
 
-
+    
 </body>
+
 </html>

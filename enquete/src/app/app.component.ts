@@ -23,7 +23,7 @@ export class AppComponent {
 
     constructor(private ref:ChangeDetectorRef, fb: FormBuilder){
       this.form = fb.group({
-        selectedCountries:  new FormArray([])
+        selectedSkills:  new FormArray([])
        });
     }
 
@@ -119,7 +119,14 @@ export class AppComponent {
     }
   
     submit() {
-      console.log(this.form.value);
-
+      console.log(this.form.value['selectedSkills']);
     }
+
+    getChildren(el: string) : String[] {
+      let children = Array.from(this.xmlReady.querySelector(el).children).map((x:any,i)=>{
+          return x.tagName
+      })
+      return children;
+    }
+    //   Chimiemoléculaire
 }
