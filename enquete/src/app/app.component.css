@@ -297,8 +297,8 @@
 
   table, th , td {
     border: 1px solid grey;
-    border-collapse: collapse;
     padding: 5px;
+    width : 150px;
   }
   
   table tr:nth-child(odd) {
@@ -308,3 +308,10 @@
   table tr:nth-child(even) {
     background-color: #ffffff;
   }
+
+  .conteneur{
+    display: flex;
+ }
+ .flex{
+    flex-grow: 1;
+ }

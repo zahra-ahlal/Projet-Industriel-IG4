@@ -40,6 +40,7 @@ export class AppComponent {
         <Polymères>
           <Amino2></Amino2>
         </Polymères>
+        <A></A>
       </Chimiemoléculaire>
     </SYNTHESE>`
 
@@ -101,7 +102,6 @@ export class AppComponent {
         for(let  i = 0; i< this.items.length; i++)
           this.skills.push(this.items[i]);
       }
-      //   Chimiemoléculaire
     }
 
     onCheckboxChange(event: any) {

@@ -34,18 +34,27 @@
 
             <button type="button" (click)="addSkill(filtre.value)">Chercher</button>
 
-            <div *ngFor="let skill of skills; let i=index">
+            <div style = "margin : 20px" *ngFor="let skill of skills; let i=index">
               <input type="checkbox" value={{skill}} formArrayName="selectedSkills" (change)="onCheckboxChange($event)" />
               {{skill}}
             </div>
-
-            <table *ngFor="let skill of form.value['selectedSkills']; let i=index">
-                <tr>{{skill}}</tr>
-                <tr *ngFor="let child of getChildren(skill)">
-                    {{child}}
-                </tr>
-            </table>
-
+            <div style = "margin : 30px" class="conteneur">
+                <table class="flex" *ngFor="let skill of form.value['selectedSkills']; let i=index" class="table table-striped">
+                    <thead>
+                        <tr >
+                        <th>{{skill}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let child of getChildren(skill)">
+                            <input type="checkbox" value={{child}} />
+                            {{child}}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            
             <button type="submit">Submit</button>
         </form>
          
@@ -55,24 +64,6 @@
     <div style = "margin : 30px">
         <p>{{ form.value | json }}</p>
     </div>
-
-    <!--div>
-        
-        <section>
-
-            <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
-              <div *ngFor="let skill of skills; let i=index">
-                <input type="checkbox" formArrayName="selectedSkills" (change)="onCheckboxChange($event)" />
-                {{skill}}
-              </div>
-              <button type="submit">Submit</button>
-            </form>
-          
-            <p>{{ form.value | json }}</p>
-
-          </section>
-
-    </div-->
 
     
 </body>
