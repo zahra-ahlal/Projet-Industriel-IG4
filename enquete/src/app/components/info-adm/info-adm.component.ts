@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { EmailValidator, NgForm, NgModel } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -10,10 +10,13 @@ import { IdentiteService } from 'src/app/services/identite.service';
   templateUrl: './info-adm.component.html',
   styleUrls: ['./info-adm.component.css']
 })
-export class InfoAdmComponent implements OnInit {
+export class InfoAdmComponent implements OnInit, OnChanges {
 
-
+  @Input() inputNumber: number; 
   constructor(private router : Router,private identiteService: IdentiteService,private route: ActivatedRoute) { }
+  ngOnChanges(changes: SimpleChanges): void {
+    throw new Error('Method not implemented.');
+  }
 
   fonctions = [
     "Directeur d'unité et/ou Responsable administratif",

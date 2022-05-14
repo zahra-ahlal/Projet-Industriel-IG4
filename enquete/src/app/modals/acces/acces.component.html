@@ -38,7 +38,7 @@
   </ng-container-->
 
 
-  <div>
+  <!--div>
     <input class="access" name="em"  type="email" [(ngModel)]="email" ngModel #em="ngModel" id="em">
     <hr>
 
@@ -56,6 +56,36 @@
     <button [disabled]="emailSent" (click)="getALLUser()"> Get List of users </button>
   
 
+  </div-->
+
+
+  <!--EXEMPLE-->
+
+  <div class="container">
+    <div class="screen">
+      <div class="screen__content">
+        <form class="login">
+          <div class="login__field">
+            <i class="login__icon fas fa-user"></i>
+            <p>Votre mail institutionnel</p>
+            <input type="text" class="login__input" placeholder="Email" name="em"  type="email" [(ngModel)]="email" ngModel #em="ngModel" id="em" >
+          </div>
+
+          <button class="button login__submit" [disabled]="emailSent" (click)="sendEmailLink(email)">
+            <span class="button__text">Obtenir le lien d'accès par mail</span>
+            <i class="button__icon fas fa-chevron-right"></i>
+          </button>				
+        </form>
+        <div class="social-login">
+          <h3>Enquête</h3>
+        </div>
+      </div>
+      <div class="screen__background">
+        <span class="screen__background__shape screen__background__shape4"></span>
+        <span class="screen__background__shape screen__background__shape3"></span>		
+        <span class="screen__background__shape screen__background__shape2"></span>
+        <span class="screen__background__shape screen__background__shape1"></span>
+      </div>		
+    </div>
   </div>
-  
   
