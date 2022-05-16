@@ -28,6 +28,7 @@ table, th , td {
   border: 1px solid rgb(235, 229, 229);
   vertical-align: middle;
   padding: 5px;
+  width: 200px;
 }
 
 table thead {

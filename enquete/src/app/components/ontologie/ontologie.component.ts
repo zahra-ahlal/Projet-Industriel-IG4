@@ -82,15 +82,16 @@ export class OntologieComponent {
   skills = [''];
 
   addSkill(filtre: string) {
-    if (filtre) {
-      this.items = Array.from(this.xmlReady.querySelector(filtre).children).map((x:any,i)=>{
+    if (filtre && this.stringXml.includes(filtre)  && !this.skills.includes(filtre)) {
+      /*this.items = Array.from(this.xmlReady.querySelector(filtre).children).map((x:any,i)=>{
         return x.tagName
-      })
+      })*/
       if(this.skills[0] == ''){
         this.skills.pop();
       }
-      for(let  i = 0; i< this.items.length; i++)
-        this.skills.push(this.items[i]);
+      this.skills.push(filtre);
+      /*for(let  i = 0; i< this.items.length; i++)
+        this.skills.push(this.items[i]);*/
     }
   }
 
