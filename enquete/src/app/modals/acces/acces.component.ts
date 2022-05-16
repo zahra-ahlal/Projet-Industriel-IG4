@@ -67,7 +67,7 @@ export class AccesComponent implements OnInit {
   }
 
 
-  /*async confirmSignIn(url) {
+  async confirmSignIn(url) {
     console.log("CONFIRM SIGN IN "+this.email)
     try {
       if(this.afAuth.isSignInWithEmailLink(url)){
@@ -87,7 +87,7 @@ export class AccesComponent implements OnInit {
       
       
     }
-  }*/
+  }
 
   
 
