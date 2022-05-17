@@ -15,17 +15,18 @@
 
                 <!-- Identité -->
                 <div *ngIf="loggedWithLink" class="identite">
-                    <!--p>Nom</p-->
-                    <input type="text" class="inputbox" name="name" ngModel #name="ngModel" placeholder="Votre Nom" required />
-                    <!--p>Prénom</p-->
-                    <input type="text" class="inputbox" name="name2" ngModel #name2="ngModel" placeholder="Votre Prénom" required />
+                    <p class="">Nom</p>
+                    <input type="text" class="inputbox" name="name" ngModel #name="ngModel" placeholder="{{identite.nom}}" [disabled]="true" required />
+                                       
+                    <p class="textInput">Prénom</p>
+                    <input type="text" class="inputbox" name="name2" ngModel #name2="ngModel" placeholder="{{identite.prenom}}" [disabled]="true" required />
                 </div>
 
                 
 
 
-                <!--p>Email</p-->
-                <input type="text" class="inputbox" name="email" ngModel  #email="ngModel" placeholder="Votre Email" required />
+                <p>Email</p>
+                <input type="text" class="inputbox" name="email" ngModel  #email="ngModel" placeholder="{{identite.email}}" [disabled]="true" required />
 
                 <!--  Click here to select BMW as your favorite car:
                     <input type="checkbox" ng-model="mySel">

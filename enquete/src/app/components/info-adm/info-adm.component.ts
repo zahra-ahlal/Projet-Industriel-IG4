@@ -93,10 +93,16 @@ export class InfoAdmComponent implements OnInit, OnChanges {
         let email = window.localStorage.getItem('emailForSignIn');
         console.log("CLOOOOOOOOOOOOOOL "+ email)
         this.identite.email = email
-        console.log("PRENOM: "+ email.split(".", 1));
-        console.log("NOM: "+ email.split("afaf.", 1));
+        let nomEtPrenom = email.split("@", 1)
+        //const str2 = str.charAt(0).toUpperCase() + str.slice(1);
+        this.identite.prenom = nomEtPrenom[0].split(".")[0].charAt(0).toUpperCase() + nomEtPrenom[0].split(".")[0].slice(1) 
+        this.identite.nom = nomEtPrenom[0].split(".")[1].charAt(0).toUpperCase() + nomEtPrenom[0].split(".")[1].slice(1)  
 
-        console.log("identite: " + this.identite.email)
+        console.log("PRENOM: "+ nomEtPrenom[0].split(".")[0]);
+        console.log("NOM: "+ nomEtPrenom[0].split(".")[1]);
+
+        console.log("identite: " + this.identite.email);
+        
         
         //if missing email, prompt user for it 
         if (!email){
