@@ -68,9 +68,8 @@ export class InfoAdmComponent implements OnInit, OnChanges {
     const url = this.router.url;
     console.log("URL : " + url)
     this.confirmSignIn(url);
+    this.saveData()
     //console.log("THIS EMAIL LOGGED : " + this.email)
-    
-
   }
 
   onSubmit(f: NgForm) {
@@ -116,6 +115,10 @@ export class InfoAdmComponent implements OnInit, OnChanges {
     } catch (err) {
       this.errorMessage = err.message;      
     }
+  }
+
+  saveData(){
+    sessionStorage.setItem('Nom', this.identite.nom);
   }
 
 }
