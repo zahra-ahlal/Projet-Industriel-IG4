@@ -70,6 +70,7 @@
   .card {
   width: 60rem;
     margin: auto;
+    padding : 30px;
     background: white;
     position:relative;
     align-self: center;
@@ -139,15 +140,29 @@
     background: linear-gradient(
   135deg
   , #333a75 0%, #298096 100%);
-    padding: 15px;
+    padding: 8px;
     border: none;
     border-radius: 20px;
     color: white;
     font-weight: 400;
     font-size: 1.2rem;
     margin-top: 10px;
-    margin-left: 25%;
-    width:50%;
+    width:30%;
+    letter-spacing: .11rem;
+    outline:none;
+  }
+
+  .button2{
+    background: linear-gradient(
+  135deg
+  , #333a75 0%, #298096 100%);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    width:30%;
     letter-spacing: .11rem;
     outline:none;
   }

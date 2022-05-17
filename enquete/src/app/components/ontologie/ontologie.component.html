@@ -4,10 +4,10 @@
         
         <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
 
-            <h1 class ="title">Ajouter les compétences de votre institut</h1>
-            <input #filtre (keyup.enter)="addSkill(filtre.value)" (blur)="addSkill(filtre.value); filtre.value='' ">
+            <h1 class ="title">Vos domaines de compétences</h1>
+            <input style="margin-top: 5%;" class="inputbox" #filtre (keyup.enter)="addSkill(filtre.value)" (blur)="addSkill(filtre.value); filtre.value='' ">
 
-            <button type="button" (click)="addSkill(filtre.value)">Chercher</button>
+            <button class="button2" type="button" (click)="addSkill(filtre.value)">Chercher</button>
 
             <div style = "margin : 20px" *ngFor="let skill of skills; let i=index">
               <input type="checkbox" value={{skill}} formArrayName="selectedSkills" (change)="onCheckboxChange($event)" />
@@ -31,12 +31,12 @@
             </div>
             
             
-            <button type="submit">Submit</button>
+            <button class="button" type="submit">Valider</button>
         </form>
 
-        <div style = "margin : 30px">
+        <!-- div style = "margin : 30px">
             <p>{{ form.value | json }}</p>
-        </div>
+        </div-->
     
          
     </div>
