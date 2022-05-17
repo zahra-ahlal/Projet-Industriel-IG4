@@ -19,7 +19,7 @@ export class OntologieComponent {
      });
   }
 
-  title = 'xmlParser';
+  keyword = 'name';
 
   stringXml = `<?xml version="1.0" encoding="UTF-8"?>
   <SYNTHESE>
@@ -81,8 +81,19 @@ export class OntologieComponent {
 
   skills = [''];
 
+  liste = this.rechercheRec(this.items,"SYNTHESE")
+
   addSkill(filtre: string) {
-    if (filtre && this.stringXml.includes(filtre)  && !this.skills.includes(filtre)) {
+    //test casse saisie
+    //console.log(this.stringXml);
+  
+    let liste = this.stringXml
+    let s=filtre
+    //console.log(liste.toLowerCase())
+    //console.log(liste.toLowerCase().includes(s.toLowerCase()));
+    let chaine = filtre
+    
+    if (filtre && this.stringXml.includes(filtre) && !this.skills.includes(filtre)) {
       /*this.items = Array.from(this.xmlReady.querySelector(filtre).children).map((x:any,i)=>{
         return x.tagName
       })*/
@@ -120,4 +131,5 @@ export class OntologieComponent {
     return children;
   }
   //   Chimiemoléculaire
+
 }

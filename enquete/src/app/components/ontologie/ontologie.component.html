@@ -7,21 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <!--div class ="mainC">
-        <h1 class ="title">XML Parser</h1>
-        <button
-        class="api"
-        (click)="parseXml()">
-            Synthese
-        </button>
-        <div *ngFor="let item of items">
-            <h2>{{item}}</h2>
-        </div>
-
-        crypter et decrypter les données avec une cles
-
-    </div-->
-
 
     <div style = "margin : 30px">
               
@@ -36,14 +21,14 @@
 
             <div style = "margin : 20px" *ngFor="let skill of skills; let i=index">
               <input type="checkbox" value={{skill}} formArrayName="selectedSkills" (change)="onCheckboxChange($event)" />
-              {{skill}}
+              {{skill | titlecase}}
             </div>
 
             <div style = "margin : 30px" class="conteneur">
                 <table *ngFor="let skill of form.value['selectedSkills']; let i=index" class="table table-striped">
                     <thead>
                         <tr >
-                        <th>{{skill}}</th>
+                        <th>{{skill | titlecase}}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -68,5 +53,23 @@
 
     
 </body>
+
+
+<!--div class="ng-autocomplete">
+    <ng-autocomplete
+        [data]="liste"
+
+        [searchKeyword]="keyword"
+
+        placeholder="Enter the Country Name"
+        
+        [itemTemplate]="itemTemplate"
+        [notFoundTemplate]="notFoundTemplate">
+    </ng-autocomplete>
+
+    
+</div-->
+
+
 
 </html>
