@@ -14,12 +14,14 @@
                 <h1>Enquête: Champs de compétences des instituts au sein du CNRS </h1>
 
                 <!-- Identité -->
-                <div class="identite">
+                <div *ngIf="loggedWithLink" class="identite">
                     <!--p>Nom</p-->
                     <input type="text" class="inputbox" name="name" ngModel #name="ngModel" placeholder="Votre Nom" required />
                     <!--p>Prénom</p-->
                     <input type="text" class="inputbox" name="name2" ngModel #name2="ngModel" placeholder="Votre Prénom" required />
                 </div>
+
+                
 
 
                 <!--p>Email</p-->

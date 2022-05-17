@@ -42,6 +42,7 @@ export class InfoAdmComponent implements OnInit, OnChanges {
 
   selectedFonction!: String;
   selectedTypeEntite!: String;
+  loggedWithLink: Boolean = false;
 
   identite: Identite = {
     nom: "",
@@ -88,8 +89,10 @@ export class InfoAdmComponent implements OnInit, OnChanges {
     
     try {
       if(this.afAuth.isSignInWithEmailLink(url)){
+        this.loggedWithLink = true
         let email = window.localStorage.getItem('emailForSignIn');
         console.log("CLOOOOOOOOOOOOOOL "+ email)
+        this.identite.email = email
         //if missing email, prompt user for it 
         if (!email){
           email = window.prompt('Please provide your email for confirmation');
