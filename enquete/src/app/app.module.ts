@@ -16,6 +16,9 @@ import { AuthService } from "./services/auth.service";
 
 
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OntologieComponent } from './components/ontologie/ontologie.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,9 +30,10 @@ import { AuthService } from "./services/auth.service";
     BrowserModule,
     AppRoutingModule,
     FormsModule,                               // <========== Add this line!
-    //ReactiveFormsModule
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
+    OntologieComponent
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

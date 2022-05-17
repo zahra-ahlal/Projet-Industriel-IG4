@@ -32,7 +32,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["src/assets/parseXml.js"]
           },
           "configurations": {
             "production": {

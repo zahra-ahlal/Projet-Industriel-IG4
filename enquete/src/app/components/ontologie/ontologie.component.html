@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div style = "margin : 30px">
+              
+        <!--ul><li *ngFor="let skill of skills"><input type="checkbox" formControlName="checked" /> {{skill}}</li></ul-->
+
+        <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+
+            <h1 class ="title">Ajouter les compétences de votre institut</h1>
+            <input #filtre (keyup.enter)="addSkill(filtre.value)" (blur)="addSkill(filtre.value); filtre.value='' ">
+
+            <button type="button" (click)="addSkill(filtre.value)">Chercher</button>
+
+            <div style = "margin : 20px" *ngFor="let skill of skills; let i=index">
+              <input type="checkbox" value={{skill}} formArrayName="selectedSkills" (change)="onCheckboxChange($event)" />
+              {{skill | titlecase}}
+            </div>
+
+            <div style = "margin : 30px" class="conteneur">
+                <table *ngFor="let skill of form.value['selectedSkills']; let i=index" class="table table-striped">
+                    <thead>
+                        <tr >
+                        <th>{{skill | titlecase}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let child of getChildren(skill)">
+                            <input type="checkbox" value={{child}} formArrayName="selectedSkills" (change)="onCheckboxChange($event)"/>
+                            {{child}}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            
+            <button type="submit">Submit</button>
+        </form>
+         
+    </div>
+
+
+    <div style = "margin : 30px">
+        <p>{{ form.value | json }}</p>
+    </div>
+
+    
+</body>
+
+
+<!--div class="ng-autocomplete">
+    <ng-autocomplete
+        [data]="liste"
+
+        [searchKeyword]="keyword"
+
+        placeholder="Enter the Country Name"
+        
+        [itemTemplate]="itemTemplate"
+        [notFoundTemplate]="notFoundTemplate">
+    </ng-autocomplete>
+
+    
+</div-->
+
+
+
+</html>

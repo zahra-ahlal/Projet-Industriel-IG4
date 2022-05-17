@@ -1,0 +1,349 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/exportOnto#"
+     xml:base="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/exportOnto"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/exportOnto"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#A_usage_individuel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#A_usage_individuel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Dispositifs_médicaux"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Acides_nucléiques -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Acides_nucléiques">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Biomolécules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Additif -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Additif">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Médicament"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Alliages_métalliques -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Alliages_métalliques">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Chimie_des_matériaux"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Autres_DM -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Autres_DM">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Dispositifs_médicaux"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Bio-dégradables -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Bio-dégradables">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Polymères"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Bio-sourcés -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Bio-sourcés">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Polymères"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Biomimétisme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Biomimétisme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Chimie_des_matériaux"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Biomolécules -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Biomolécules">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Chimie_moléculaire"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Chimie_des_matériaux -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Chimie_des_matériaux">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#SYNTHESE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Chimie_moléculaire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Chimie_moléculaire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#SYNTHESE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Céramiques -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Céramiques">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Chimie_des_matériaux"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#DMIA -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#DMIA">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Dispositifs_médicaux"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Dispositifs_actifs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Dispositifs_actifs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Dispositifs_médicaux"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Dispositifs_mobiles -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Dispositifs_mobiles">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Dispositifs_médicaux"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Dispositifs_médicaux -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Dispositifs_médicaux">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Verres_et_amorpes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Domaines_thérapeutiques -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Domaines_thérapeutiques">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Délivrance_de_principes_actifs"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Reconstruction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Délivrance_de_principes_actifs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Délivrance_de_principes_actifs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Médicament"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Verres_et_amorpes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Equipements_médicaux -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Equipements_médicaux">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Dispositifs_médicaux"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Hétérocycycles -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Hétérocycycles">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Biomolécules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#IMAGERIE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#IMAGERIE">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Bio-dégradables"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Vitamines"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Lipides -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Lipides">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Biomolécules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Matériaux_bio-inspirés -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Matériaux_bio-inspirés">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Chimie_des_matériaux"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Médicament -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Médicament">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Bio-dégradables"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Vitamines"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Métabolites -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Métabolites">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Biomolécules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Nanomatériaux -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Nanomatériaux">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Chimie_des_matériaux"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Polymères -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Polymères">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Chimie_des_matériaux"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Chimie_moléculaire"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Principes_actifs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Principes_actifs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Médicament"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Reconstruction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Reconstruction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Verres_et_amorpes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#SYNTHESE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#SYNTHESE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Saccharides -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Saccharides">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Biomolécules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Stéroides -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Stéroides">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Biomolécules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Verres_et_amorpes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Verres_et_amorpes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Chimie_des_matériaux"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Vitamines -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Vitamines">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Biomolécules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Amino-acides/peptides -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Amino-acides/peptides">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Biomolécules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Ciblage/vectorisation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Ciblage/vectorisation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Médicament"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Ciblages/vectorisation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Ciblages/vectorisation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Verres_et_amorpes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Composites/hybride_?_(INP) -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Composites/hybride_?_(INP)">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Chimie_des_matériaux"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Matériaux_d&apos;origine_naturelle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Matériaux_d&apos;origine_naturelle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Chimie_des_matériaux"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Nucléosides/nucléotides -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Nucléosides/nucléotides">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zahra.ahlal/ontologies/2022/3/filiereITS#Biomolécules"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
