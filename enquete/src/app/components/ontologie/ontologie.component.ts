@@ -1,5 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormArray, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class OntologieComponent {
 
   form: FormGroup;
 
-  constructor(private ref:ChangeDetectorRef, fb: FormBuilder){
+  constructor(private router : Router,private ref:ChangeDetectorRef, fb: FormBuilder){
     this.form = fb.group({
       selectedSkills:  new FormArray([])
      });
@@ -122,6 +123,7 @@ export class OntologieComponent {
 
   submit() {
     console.log(this.form.value['selectedSkills']);
+    this.router.navigate(['/conclusion']);
   }
 
   getChildren(el: string) : String[] {

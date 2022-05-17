@@ -81,7 +81,7 @@ export class InfoAdmComponent implements OnInit, OnChanges {
     
     this.identiteService.createIdentite(f.value)//,this.listeIngredientsFinal)
       //then(() => f.reset());
-      this.router.navigate(['/conclusion']);
+      this.router.navigate(['/ontologie']);
   }
 
 
