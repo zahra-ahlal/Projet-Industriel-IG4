@@ -1,0 +1,26 @@
+
+    <div class="mainscreen">
+        <!-- <img src="https://image.freepik.com/free-vector/purple-background-with-neon-frame_52683-34124.jpg"  class="bgimg " alt="">--> 
+          <div class="card">
+            
+            <div class="rightside">
+              <form action="#" #conclucionForm="ngForm" (ngSubmit)="onSubmit(conclucionForm)" >
+                <h1 style="margin-top: 5%;margin-left: 10%;">Conclusion </h1>
+
+                <!-- Conclusion -->
+                <div class="conclusion">
+                    <!--p>Nom</p-->
+                    <!--input type="text" class="inputbox" name="Conclusion" ngModel #name="ngModel" placeholder="Votre Nom" required /-->
+                    <textarea  class="textarea" name="Conclusion" ngModel #name="ngModel" placeholder="Avez-vous des commentaires?" required rows="12" cols="100">
+                    </textarea>   
+                </div>
+
+
+              
+                <button type="submit" class="button">Soumettre l'enquête</button>
+              </form>
+
+          </div>
+        </div>
+      
+    
