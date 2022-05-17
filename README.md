@@ -4,7 +4,7 @@ A brief description of what this project does and who it's for
 
 ## Authors
 
-- [zahra AHLAL](https://github.com/zahra-ahlal)
+- [Zahra AHLAL](https://github.com/zahra-ahlal)
 - [Afaf BENTOUIL](https://github.com/afafbentouil)
 
 ## Demo
