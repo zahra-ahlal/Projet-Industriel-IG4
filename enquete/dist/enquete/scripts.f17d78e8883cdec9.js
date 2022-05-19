@@ -1,0 +1,1 @@
+var parseXml;if(void 0!==window.DOMParser)parseXml=function(e){return(new window.DOMParser).parseFromString(e,"text/xml")};else{if(void 0===window.ActiveXObject||!new window.ActiveXObject("Microsoft.XMLDOM"))throw new Error("No XML parser found");parseXml=function(e){var n=new window.ActiveXObject("Microsoft.XMLDOM");return n.async="false",n.loadXML(e),n}}
