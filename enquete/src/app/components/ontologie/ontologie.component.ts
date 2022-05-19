@@ -22,6 +22,9 @@ export class OntologieComponent {
 
   keyword = 'name';
 
+  selectedDomain = ""
+  domaines = ["SYNTHESE","B","C"]
+
   stringXml = `<?xml version="1.0" encoding="UTF-8"?>
   <SYNTHESE>
     <Chimiemoléculaire>

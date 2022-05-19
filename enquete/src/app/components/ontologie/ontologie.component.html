@@ -5,9 +5,15 @@
         <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
 
             <h1 class ="title">Vos domaines de compétences</h1>
-            <input style="margin-top: 5%;" class="inputbox" #filtre (keyup.enter)="addSkill(filtre.value)" (blur)="addSkill(filtre.value); filtre.value='' ">
 
-            <button class="button2" type="button" (click)="addSkill(filtre.value)">Chercher</button>
+            <select class="inputbox" name="domaine" [(ngModel)]="selectedDomain" ngModel  #domaine="ngModel" id="domaine" required>
+                <!--option value="">--Veuillez sélectionner--</option-->
+                <option *ngFor="let domaine of domaines" [value]="domaine"  > {{domaine}} </option>
+            </select>
+
+            <button class="button2" type="button" (click)="addSkill(selectedDomain)">Chercher</button>
+
+            <input style="margin-top: 5%;" class="inputbox" #filtre (keyup.enter)="addSkill(filtre.value)" (blur)="addSkill(filtre.value); filtre.value='' ">
 
             <div style = "margin : 20px" *ngFor="let skill of skills; let i=index">
               <input type="checkbox" value={{skill}} formArrayName="selectedSkills" (change)="onCheckboxChange($event)" />
