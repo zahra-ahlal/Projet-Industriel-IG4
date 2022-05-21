@@ -42,7 +42,7 @@ export class InfoAdmComponent implements OnInit, OnChanges {
 
   selectedFonction!: String;
   selectedTypeEntite!: String;
-  loggedWithLink: Boolean = false;
+  //loggedWithLink: Boolean = false;
 
   identite: Identite = {
     nom: "",
