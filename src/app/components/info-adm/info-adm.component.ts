@@ -67,7 +67,7 @@ export class InfoAdmComponent implements OnInit, OnChanges {
 
     const url = this.router.url;
     console.log("URL : " + url)
-    this.confirmSignIn(url);
+    //this.confirmSignIn(url);
     //console.log("THIS EMAIL LOGGED : " + this.email)
     
 
@@ -84,7 +84,7 @@ export class InfoAdmComponent implements OnInit, OnChanges {
       this.router.navigate(['/ontologie']);
   }
 
-
+/*
   async confirmSignIn(url) {
     
     try {
@@ -105,6 +105,6 @@ export class InfoAdmComponent implements OnInit, OnChanges {
     } catch (err) {
       this.errorMessage = err.message;      
     }
-  }
+  }*/
 
 }
