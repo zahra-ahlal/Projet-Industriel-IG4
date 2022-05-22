@@ -21,7 +21,17 @@ export class OntologieComponent {
 
   idReponse : string = "";
 
-  rep : any;
+  rep : Enquete = {
+    id: "",
+    nom: "coucou",
+    prenom: "",
+    email: "",
+    fonction: "",
+    numEntite: "",
+    typeEntite: "",
+    nomsTypeEntite: "",
+    listeCompetences : ["a","e"]
+  };
 
   constructor(private router : Router, private enqueteService: EnqueteService,private ref:ChangeDetectorRef, fb: FormBuilder, private route : ActivatedRoute, private _location: Location){
     this.form = fb.group({
@@ -38,16 +48,16 @@ export class OntologieComponent {
   }
 
   getReponse() : void {
-    this.enqueteService.getReponseByID(this.idReponse).snapshotChanges().pipe(
-      map(changes =>
-        changes.map(c =>
-          ({ id: c.payload.doc.id, ...c.payload.doc.data() })
-        )
-      )
-    ).subscribe(data => {
-      this.rep = data;
-      //console.log("REpinseee" + this.rep);
-    });
+    this.enqueteService.getReponseByID(this.idReponse).subscribe(data => {
+      this.rep.nom = data.nom;
+      this.rep.prenom = data.prenom;
+      this.rep.email = data.email;
+      this.rep.fonction = data.fonction;
+      this.rep.numEntite = data.numEntite;
+      this.rep.nomsTypeEntite = data.nomsTypeEntite;
+      this.rep.typeEntite = data.typeEntite;
+      console.log("Pre recuperer " + data.fonction)
+    })
   }
 
   backClicked() {
@@ -160,7 +170,8 @@ export class OntologieComponent {
 
   submit() {
     console.log(this.form.value['selectedSkills']);
-    //this.enqueteService.addReponse(f.value)//,this.listeIngredientsFinal)
+    this.rep.listeCompetences = this.form.value["selectedSkills"];
+    this.enqueteService.updateReponse(this.idReponse, this.rep);
     this.router.navigate(['/conclusion']);
   }
 

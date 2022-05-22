@@ -24,15 +24,16 @@ export class EnqueteService {
   }
 
   //recuperer une reponse par son id
-  getReponseByID(id:string): AngularFirestoreCollection<Enquete>{
+  getReponseByID(id:string){
     //@ts-ignore
     //console.log("Id dans service" + id);
-    return this.reponseRef.doc(id).valueChanges()
+    this.reponse = this.reponseRef.doc(id).valueChanges();
+    return this.reponse;
   }
 
   addReponse(rep: Enquete){
-    return this.firestore.collection(this.dbPath).add({
-      id : rep.id,
+    const newId = this.firestore.createId();
+    this.firestore.collection(this.dbPath).doc(newId).set({
       nom: rep.nom,
       prenom: rep.prenom,
       email: rep.email,
@@ -42,9 +43,11 @@ export class EnqueteService {
       nomsTypeEntite: rep.nomsTypeEntite,
       listeCompetences : rep.listeCompetences
     });
+
+    return newId;
   }
   
-  updateFiche(id: string, data: any): Promise<void> {
+  updateReponse(id: string, data: any): Promise<void> {
     return this.reponseRef.doc(id).update(data);
   }
 

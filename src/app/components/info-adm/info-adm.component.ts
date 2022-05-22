@@ -85,14 +85,29 @@ export class InfoAdmComponent implements OnInit, OnChanges {
     
     //this.identiteService.createIdentite(f.value)//,this.listeIngredientsFinal)
       //then(() => f.reset());
-   /* this.identite = f.value;
+   /* this.identite = f.value;*/
     this.email = f.value["email"]
-    this.identite.id= this.email;*/
     
-    console.log("NEWWW  "+this.enqueteService.addReponse(this.identite))
+    this.identite.nom = f.value["name"];
+    this.identite.prenom = f.value["name2"];
+    this.identite.email = f.value["email"];
+    this.identite.fonction = f.value["fonction"];
     
-    console.log('ontologie/:' + this.email);
-    this.router.navigate(['ontologie/:' +  this.email]);  
+    if(f.value["numEntite"]){
+      this.identite.numEntite = f.value["numEntite"];
+    }
+
+    if(f.value["nomsTypeEntite"]){
+      this.identite.nomsTypeEntite = f.value["nomsTypeEntite"];
+    }
+
+    if(f.value["typeEntite"]){
+      this.identite.typeEntite = f.value["typeEntite"];
+    }
+      
+    
+    
+    this.router.navigate(['ontologie/' +  this.enqueteService.addReponse(this.identite)]);  
   }
 
 /*
