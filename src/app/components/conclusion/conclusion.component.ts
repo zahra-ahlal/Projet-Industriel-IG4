@@ -19,7 +19,7 @@ export class ConclusionComponent implements OnInit {
     
     this.conclusionService.addConclusion(f.value)//,this.listeIngredientsFinal)
       //then(() => f.reset());
-    this.router.navigate(['/']);
+    this.router.navigate(['/recapitulatif']);
    
     
   }

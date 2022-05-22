@@ -17,6 +17,7 @@ import { AuthService } from "./services/auth.service";
 
 
 import { OntologieComponent } from './components/ontologie/ontologie.component';
+import { RecapComponent } from './components/recap/recap.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { OntologieComponent } from './components/ontologie/ontologie.component';
     InfoAdmComponent,
     ConclusionComponent,
     AccesComponent,
-    OntologieComponent
+    OntologieComponent,
+    RecapComponent
   ],
   imports: [
     BrowserModule,

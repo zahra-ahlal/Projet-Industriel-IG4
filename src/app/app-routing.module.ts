@@ -8,13 +8,16 @@ import { AccesComponent } from './modals/acces/acces.component';
 
 import { AuthGuard } from './shared/guard/auth.guard';
 import { OntologieComponent } from './components/ontologie/ontologie.component';
+import { RecapComponent } from './components/recap/recap.component';
 
 
 const routes: Routes = [
   { path: 'info-administratives', component: InfoAdmComponent}, //canActivate: [AuthGuard] 
   { path: 'conclusion', component: ConclusionComponent },
   { path: 'acces', component: AccesComponent },
-  {path: 'ontologie', component: OntologieComponent},
+  { path: 'ontologie', component: OntologieComponent},
+  { path: 'recapitulatif', component: RecapComponent},
+
   {path: '**', component: InfoAdmComponent}
 ]; // sets up routes constant where you define your routes
 
