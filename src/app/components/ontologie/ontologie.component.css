@@ -277,3 +277,62 @@ body {
   color: white;
   background: rgba(0, 0, 0, 0.25);
 }
+
+  
+  /***********/
+
+  .leftsideDiv {
+    /*background: #862b2b;*/
+    width: 25rem;
+    display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    border-top-left-radius: 1.5rem;
+      border-bottom-left-radius: 1.5rem;
+  }
+  
+  .rightsideDiv {
+      /*background-color: #ffffff;*/
+    width: 35rem;
+    /*border-bottom-right-radius: 1.5rem;
+      border-top-right-radius: 1.5rem;
+      padding: 1rem 2rem 3rem 3rem;*/
+  
+      width: 25rem;
+    display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    border-top-right-radius: 1.5rem;
+      border-bottom-right-radius: 1.5rem;
+  }
+  
+  .cardDiv {
+    width: 60rem;
+      margin: auto;
+      /*background: white;*/
+      position:center;
+      align-self: center;
+      /*border-radius: 1.5rem;
+      box-shadow: 4px 3px 20px #3535358c;*/
+      display:flex;
+      flex-direction: row;
+      
+  }
+  
+
+  .buttonDivG{
+    background: linear-gradient(
+135deg
+, #db7235 0%, #e68639 100%);
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-left: 25%;
+    width:50%;
+    letter-spacing: .11rem;
+    outline:none;
+}
