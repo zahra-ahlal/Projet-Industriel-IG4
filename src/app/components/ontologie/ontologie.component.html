@@ -2,14 +2,22 @@
 
     <div class="card">
         
+        <!----- Compétences ----->
+
+        <h1 class ="title">Vos domaines de compétences</h1>
+
+        <select class="inputbox" name="domaine" [(ngModel)]="selectedDomain" ngModel  #domaine="ngModel" id="domaine" required>
+              
+            <option *ngFor="let domaine of domaines" [value]="domaine"  > {{domaine}} </option>
+          
+        </select>
+        
+        {{selectedDomain}}
+
         <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
 
-            <h1 class ="title">Vos domaines de compétences</h1>
-
-            <select class="inputbox" name="domaine" [(ngModel)]="selectedDomain" ngModel  #domaine="ngModel" id="domaine" required>
-                <!--option value="">--Veuillez sélectionner--</option-->
-                <option *ngFor="let domaine of domaines" [value]="domaine"  > {{domaine}} </option>
-            </select>
+            
+            <!------------------------------------->
 
             <button class="button2" type="button" (click)="addSkill(selectedDomain)">Chercher</button>
 
@@ -29,27 +37,19 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let child of getChildren(skill)">
-                            <input type="checkbox" value={{child}} formArrayName="selectedSkills" (change)="onCheckboxChange($event)"/>
+                            <input type="checkbox" value={{child}} formArrayName="selectedSkills" 
+                                        (change)="onCheckboxChange($event)"/>
+                            
                             {{child}}
                         </tr>
                     </tbody>
                 </table>
             </div>
             
-            
             <button class="button" type="submit">Valider</button>
+
         </form>
-
-        <!-- div style = "margin : 30px">
-            <p>{{ form.value | json }}</p>
-        </div-->
     
-         
     </div>
-
-
     
 </div>
-
-    
-    
