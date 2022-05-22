@@ -14,6 +14,7 @@ import { RecapComponent } from './components/recap/recap.component';
 const routes: Routes = [
   { path: 'info-administratives', component: InfoAdmComponent}, //canActivate: [AuthGuard] 
   { path: 'conclusion', component: ConclusionComponent },
+  { path: 'conclusion/:idReponse', component: ConclusionComponent},
   { path: 'acces', component: AccesComponent },
   { path: 'ontologie', component: OntologieComponent},
   { path: 'ontologie/:email', component: OntologieComponent},

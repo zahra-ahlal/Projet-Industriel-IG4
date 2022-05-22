@@ -165,14 +165,13 @@ export class OntologieComponent {
       .findIndex(x => x.value === event.target.value);
       selectedSkills.removeAt(index);
     }
-
   }
 
   submit() {
     console.log(this.form.value['selectedSkills']);
     this.rep.listeCompetences = this.form.value["selectedSkills"];
     this.enqueteService.updateReponse(this.idReponse, this.rep);
-    this.router.navigate(['/conclusion']);
+    this.router.navigate(['/conclusion/' + this.idReponse]);
   }
 
   getChildren(el: string) : String[] {

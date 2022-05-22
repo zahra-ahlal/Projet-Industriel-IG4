@@ -8,4 +8,5 @@ export class Enquete {
     typeEntite?: string;
     nomsTypeEntite?: string;
     listeCompetences : String[];
+    conclusion?: string;
 }
