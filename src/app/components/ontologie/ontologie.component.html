@@ -30,14 +30,16 @@
         <!----- Compétences ----->
         <div class="container">
 
-            <h1 class ="title">Vos domaines de compétences</h1>
+            <h1 class ="title">Champs de compétences</h1>
+
+            <h5 class ="subtitle" style="font-style: italic; ">Veuillez selectionner votre domaine principal</h5>
 
             <select class="inputbox" name="domaine" [(ngModel)]="selectedDomain" ngModel  #domaine="ngModel" id="domaine" required>
                 
                 <option *ngFor="let domaine of domaines" [value]="domaine"  > {{domaine}} </option>
             
             </select>
-            
+
             <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
 
                 <!------------------------------------->

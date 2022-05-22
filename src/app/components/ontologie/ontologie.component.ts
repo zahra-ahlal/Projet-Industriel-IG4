@@ -1,6 +1,9 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormArray, FormControl } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { map } from 'rxjs/operators';
+import { Enquete } from 'src/app/models/enquete.model';
+import { EnqueteService } from 'src/app/services/enquete.service';
 
 
 @Component({
@@ -14,10 +17,35 @@ export class OntologieComponent {
 
   form: FormGroup;
 
-  constructor(private router : Router,private ref:ChangeDetectorRef, fb: FormBuilder){
+  idReponse : string = "";
+
+  rep : any;
+
+  constructor(private router : Router, private enqueteService: EnqueteService,private ref:ChangeDetectorRef, fb: FormBuilder, private route : ActivatedRoute){
     this.form = fb.group({
       selectedSkills:  new FormArray([])
      });
+    
+  }
+
+  ngOnInit(): void {
+    this.idReponse = this.route.snapshot.params['email'];
+    console.log("mail recupéré  "+ this.idReponse);
+
+    this.getReponse();
+  }
+
+  getReponse() : void {
+    this.enqueteService.getReponseByID(this.idReponse).snapshotChanges().pipe(
+      map(changes =>
+        changes.map(c =>
+          ({ id: c.payload.doc.id, ...c.payload.doc.data() })
+        )
+      )
+    ).subscribe(data => {
+      this.rep = data;
+      //console.log("REpinseee" + this.rep);
+    });
   }
 
   keyword = 'name';
@@ -126,6 +154,7 @@ export class OntologieComponent {
 
   submit() {
     console.log(this.form.value['selectedSkills']);
+    //this.enqueteService.addReponse(f.value)//,this.listeIngredientsFinal)
     this.router.navigate(['/conclusion']);
   }
 
