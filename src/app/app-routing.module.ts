@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'conclusion', component: ConclusionComponent },
   { path: 'acces', component: AccesComponent },
   { path: 'ontologie', component: OntologieComponent},
+  { path: 'ontologie/:email', component: OntologieComponent},
   { path: 'recapitulatif', component: RecapComponent},
 
   {path: '**', component: InfoAdmComponent}

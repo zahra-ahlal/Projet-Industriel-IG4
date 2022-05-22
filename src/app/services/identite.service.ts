@@ -14,7 +14,7 @@ export class IdentiteService {
     return this.firestore.collection('identites').snapshotChanges();
   }
 
-  createIdentite(identite: Identite){
-    return this.firestore.collection('identites').add(identite); 
+  createIdentite(identite: Identite) {
+    return this.firestore.collection('reponses').add(identite); 
   }
 }

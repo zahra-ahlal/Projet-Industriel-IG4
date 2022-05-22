@@ -9,6 +9,8 @@ import { IdentiteService } from 'src/app/services/identite.service';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
+import { Enquete } from 'src/app/models/enquete.model';
+import { EnqueteService } from 'src/app/services/enquete.service';
 
 @Component({
   selector: 'app-info-adm',
@@ -18,7 +20,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class InfoAdmComponent implements OnInit, OnChanges {
 
   @Input() inputNumber: number; 
-  constructor(private router : Router,private identiteService: IdentiteService,private route: ActivatedRoute,public authService: AuthService, public afAuth: AngularFireAuth) { }
+  constructor(private router : Router,private enqueteService: EnqueteService,private route: ActivatedRoute,public authService: AuthService, public afAuth: AngularFireAuth) { }
   ngOnChanges(changes: SimpleChanges): void {
     throw new Error('Method not implemented.');
   }
@@ -44,14 +46,16 @@ export class InfoAdmComponent implements OnInit, OnChanges {
   selectedTypeEntite!: String;
   //loggedWithLink: Boolean = false;
 
-  identite: Identite = {
-    nom: "",
+  identite: Enquete = {
+    id: "",
+    nom: "coucou",
     prenom: "",
     email: "",
     fonction: "",
     numEntite: "",
     typeEntite: "",
-    nomsTypeEntite: ""
+    nomsTypeEntite: "",
+    listeCompetences : ["a","e"]
   }
 
   user : Observable<any>;
@@ -79,9 +83,16 @@ export class InfoAdmComponent implements OnInit, OnChanges {
     console.log(this.fonctions[1])
     console.log("SELECTED"+ this.selectedFonction)
     
-    this.identiteService.createIdentite(f.value)//,this.listeIngredientsFinal)
+    //this.identiteService.createIdentite(f.value)//,this.listeIngredientsFinal)
       //then(() => f.reset());
-      this.router.navigate(['/ontologie']);
+   /* this.identite = f.value;
+    this.email = f.value["email"]
+    this.identite.id= this.email;*/
+    
+    console.log("NEWWW  "+this.enqueteService.addReponse(this.identite))
+    
+    console.log('ontologie/:' + this.email);
+    this.router.navigate(['ontologie/:' +  this.email]);  
   }
 
 /*
