@@ -207,13 +207,13 @@ body {
   background: #2a2a2a;
 }
 
-.container {
+.container2 {
   margin: 60px auto;
   width: 400px;
   text-align: center;
 }
 
-.container .progress {
+.container2 .progress {
   margin: 0 auto;
   width: 400px;
 }
@@ -336,3 +336,5 @@ body {
     letter-spacing: .11rem;
     outline:none;
 }
+
+
