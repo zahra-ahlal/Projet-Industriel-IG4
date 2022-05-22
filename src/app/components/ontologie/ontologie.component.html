@@ -11,17 +11,14 @@
             <option *ngFor="let domaine of domaines" [value]="domaine"  > {{domaine}} </option>
           
         </select>
-        
-        {{selectedDomain}}
 
         <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
 
-            
             <!------------------------------------->
 
             <button class="button2" type="button" (click)="addSkill(selectedDomain)">Chercher</button>
 
-            <input style="margin-top: 5%;" class="inputbox" #filtre (keyup.enter)="addSkill(filtre.value)" (blur)="addSkill(filtre.value); filtre.value='' ">
+            <!--input style="margin-top: 5%;" class="inputbox" #filtre (keyup.enter)="addSkill(filtre.value)" (blur)="addSkill(filtre.value); filtre.value='' "-->
 
             <div style = "margin : 20px" *ngFor="let skill of skills; let i=index">
               <input type="checkbox" value={{skill}} formArrayName="selectedSkills" (change)="onCheckboxChange($event)" />
