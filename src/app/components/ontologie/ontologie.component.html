@@ -3,49 +3,54 @@
     <div class="card">
         
         <!----- Compétences ----->
+        <div class="container">
 
-        <h1 class ="title">Vos domaines de compétences</h1>
+            <h1 class ="title">Vos domaines de compétences</h1>
 
-        <select class="inputbox" name="domaine" [(ngModel)]="selectedDomain" ngModel  #domaine="ngModel" id="domaine" required>
-              
-            <option *ngFor="let domaine of domaines" [value]="domaine"  > {{domaine}} </option>
-          
-        </select>
-
-        <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
-
-            <!------------------------------------->
-
-            <button class="button2" type="button" (click)="addSkill(selectedDomain)">Chercher</button>
-
-            <!--input style="margin-top: 5%;" class="inputbox" #filtre (keyup.enter)="addSkill(filtre.value)" (blur)="addSkill(filtre.value); filtre.value='' "-->
-
-            <div style = "margin : 20px" *ngFor="let skill of skills; let i=index">
-              <input type="checkbox" value={{skill}} formArrayName="selectedSkills" (change)="onCheckboxChange($event)" />
-              {{skill | titlecase}}
-            </div>
-
-            <div style = "margin : 30px" class="conteneur">
-                <table *ngFor="let skill of form.value['selectedSkills']; let i=index" class="table table-striped">
-                    <thead>
-                        <tr >
-                        <th>{{skill | titlecase}}</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let child of getChildren(skill)">
-                            <input type="checkbox" value={{child}} formArrayName="selectedSkills" 
-                                        (change)="onCheckboxChange($event)"/>
-                            
-                            {{child}}
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <select class="inputbox" name="domaine" [(ngModel)]="selectedDomain" ngModel  #domaine="ngModel" id="domaine" required>
+                
+                <option *ngFor="let domaine of domaines" [value]="domaine"  > {{domaine}} </option>
             
-            <button class="button" type="submit">Valider</button>
+            </select>
+            
+            <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
 
-        </form>
+                <!------------------------------------->
+    
+                <button class="button2" type="button" (click)="addSkill(selectedDomain)">Chercher</button>
+    
+                <!--input style="margin-top: 5%;" class="inputbox" #filtre (keyup.enter)="addSkill(filtre.value)" (blur)="addSkill(filtre.value); filtre.value='' "-->
+    
+                <div style = "margin : 20px" *ngFor="let skill of skills; let i=index">
+                  <input type="checkbox" value={{skill}} formArrayName="selectedSkills" (change)="onCheckboxChange($event)" />
+                  {{skill | titlecase}}
+                </div>
+    
+                <div style = "margin : 30px" class="conteneur">
+                    <table *ngFor="let skill of form.value['selectedSkills']; let i=index" class="table table-striped">
+                        <thead>
+                            <tr >
+                            <th>{{skill | titlecase}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let child of getChildren(skill)">
+                                <input type="checkbox" value={{child}} formArrayName="selectedSkills" 
+                                            (change)="onCheckboxChange($event)"/>
+                                
+                                {{child}}
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <button class="button" type="submit">Valider</button>
+    
+            </form>
+
+        </div>
+        
+        
     
     </div>
     
