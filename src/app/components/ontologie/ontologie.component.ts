@@ -4,6 +4,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { Enquete } from 'src/app/models/enquete.model';
 import { EnqueteService } from 'src/app/services/enquete.service';
+import {Location} from '@angular/common';
+
 
 
 @Component({
@@ -21,7 +23,7 @@ export class OntologieComponent {
 
   rep : any;
 
-  constructor(private router : Router, private enqueteService: EnqueteService,private ref:ChangeDetectorRef, fb: FormBuilder, private route : ActivatedRoute){
+  constructor(private router : Router, private enqueteService: EnqueteService,private ref:ChangeDetectorRef, fb: FormBuilder, private route : ActivatedRoute, private _location: Location){
     this.form = fb.group({
       selectedSkills:  new FormArray([])
      });
@@ -46,6 +48,10 @@ export class OntologieComponent {
       this.rep = data;
       //console.log("REpinseee" + this.rep);
     });
+  }
+
+  backClicked() {
+    this._location.back();
   }
 
   keyword = 'name';
