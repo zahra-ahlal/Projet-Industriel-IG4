@@ -46,6 +46,7 @@ export class ConclusionComponent implements OnInit {
       this.rep.numEntite = data.numEntite;
       this.rep.nomsTypeEntite = data.nomsTypeEntite;
       this.rep.typeEntite = data.typeEntite;
+      this.rep.listeCompetences = data.listeCompetences;
       console.log("Pre recuperer " + data.fonction)
     })
   }
