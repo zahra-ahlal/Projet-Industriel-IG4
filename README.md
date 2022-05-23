@@ -1,6 +1,6 @@
 # Projet-Industriel-IG4
 
-A brief description of what this project does and who it's for
+The objective of this project is to create a survey tool in the form of a web application which aims to collect the fields of expertise of the CNRS institutes.
 
 ## Authors
 
@@ -9,11 +9,10 @@ A brief description of what this project does and who it's for
 
 ## Demo
 
-Insert gif or link to demo
+https://prototype-enquete.herokuapp.com/
 
 ## Documentation
 
-If you have documentation for your project
 
 [Documentation](https://linktodocumentation)
 
