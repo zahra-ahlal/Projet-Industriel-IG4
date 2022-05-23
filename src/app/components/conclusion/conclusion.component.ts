@@ -53,7 +53,7 @@ export class ConclusionComponent implements OnInit {
 
   onSubmit(f: NgForm) {
     this.conclusion = f.value["Conclusion"]
-    this.router.navigate(['recapitulatif']);  
+    this.router.navigate(['recapitulatif/'+ this.idReponse]);  
     console.log(f.value["Conclusion"])
     this.rep.conclusion = f.value["Conclusion"];
     this.enqueteService.updateReponse(this.idReponse, this.rep);

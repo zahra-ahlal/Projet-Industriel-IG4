@@ -19,8 +19,8 @@ export class EnqueteService {
   }
 
   //recuperer toute les reponses
-  getAllReponses (): AngularFirestoreCollection<Enquete> {
-    return this.reponseRef;
+  getAllReponses () {
+    return this.reponseRef.valueChanges();
   }
 
   //recuperer une reponse par son id
