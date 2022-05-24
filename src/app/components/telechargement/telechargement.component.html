@@ -1,33 +1,38 @@
-  
-<a style="cursor: pointer" (click)="exportexcel()">
-    <i class="fas fa-file-excel">Télécharger les réponses</i>
-  </a>
+<div class="mainscreen">
 
-<table id="excel-table"> 
-    <tr>       
-       <th>Nom</th> 
-       <th>Prénom</th>  
-       <th> Email</th> 
-       <th>Fonction</th> 
-       <th>Type d'entité</th>    
-       <th>Nom du type d'entité</th> 
-       <th>N° de l'entité</th>    
-       <th>Domaines de recherches</th>
-       <th>Conclusion</th>
+   <div class="card">
 
+     
+      <table id="excel-table" class="table table-striped"> 
+         <thead>       
+            <th>Nom</th> 
+            <th>Prénom</th>  
+            <th> Email</th> 
+            <th>Fonction</th> 
+            <th>Type d'entité</th>    
+            <th>Nom du type d'entité</th> 
+            <th>N° de l'entité</th>    
+            <th>Domaines de recherches</th>
+            <th>Conclusion</th>
+         </thead>    
+         <tbody *ngFor="let rep of reponses">
+            <td>{{ rep.nom }}</td>  
+            <td>{{ rep.prenom }}</td> 
+            <td>{{ rep.email }}</td> 
+            <td>{{ rep.fonction }}</td> 
+            <td>{{ rep.typeEntite }}</td> 
+            <td>{{ rep.nomsTypeEntite }}</td> 
+            <td>{{ rep.numEntite }}</td> 
+            <td><p *ngFor="let competences of rep.listeCompetences">{{competences}}</p></td> 
+            <td>{{ rep.conclusion }}</td>        
+         </tbody> 
+      </table>
 
-    </tr>    
-    <tr *ngFor="let rep of reponses">
-       <td>{{ reponses[0].nom }}</td>  
-       <td>{{ rep.prenom }}</td> 
-       <td>{{ rep.email }}</td> 
-       <td>{{ rep.fonction }}</td> 
-       <td>{{ rep.typeEntite }}</td> 
-       <td>{{ rep.nomsTypeEntite }}</td> 
-       <td>{{ rep.numEntite }}</td> 
-       <!--td *ngFor="let competences of rep.listeCompetences">{{competences}}</td--> 
-       <td>{{ rep.conclusion }}</td> 
-
+      <a style="cursor: pointer" (click)="exportexcel()">
+         <i class="fas fa-file-excel">Télécharger les réponses</i>
+       </a>
        
-    </tr> 
-</table>
+      </div>
+      
+      
+</div>

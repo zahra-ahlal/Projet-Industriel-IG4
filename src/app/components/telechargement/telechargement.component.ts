@@ -11,7 +11,7 @@ import * as XLSX from 'xlsx';
 })
 export class TelechargementComponent implements OnInit {
 
-  reponses : any;
+  reponses : Array<Enquete>;
 
   constructor(private router : Router,private enqueteService: EnqueteService, private route: ActivatedRoute) { }
 
@@ -41,6 +41,7 @@ export class TelechargementComponent implements OnInit {
       }*/
       console.log("REP: " + this.reponses.length)
     })
+    console.log("REP: " + this.reponses.length)
   }
 
    /*name of the excel-file which will be downloaded. */ 

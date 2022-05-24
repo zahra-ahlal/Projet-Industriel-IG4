@@ -1,0 +1,340 @@
+/* You can add global styles to this file, and also import other style files */
+:host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+    padding : 10px;
+  }
+  
+  h2 {
+    margin-top : 8px 0;
+    margin-left: 20px;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  table, th , td {
+    border: 1px solid rgb(235, 229, 229);
+    vertical-align: middle;
+    padding: 5px;
+    width: 50%;
+  }
+  
+  table thead {
+    background-color: #d6f9ff;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+  
+  .container {
+    position : relative;
+  }
+  
+  h4 {
+    margin: 2rem 0rem 1rem;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif!important;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  }
+  
+  .mainscreen
+  {
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
+  display: flex;
+    flex-direction: column;
+    background: linear-gradient(#8cd7fa, #c0d9e7,#f9fafc);
+    /*background-image: url("https://wallpaperaccess.com/full/3063067.png");
+    color:#963E7B;*/
+  }
+  
+  .card {
+  width: 60rem;
+    margin: auto;
+    padding : 30px;
+    background: white;
+    position:relative;
+    align-self: center;
+    border-radius: 1.5rem;
+    box-shadow: 4px 3px 20px #3535358c;
+    display:flex;
+    flex-direction: row;
+    
+  }
+  
+  .leftside {
+  background: #e9e9e9;
+  width: 25rem;
+  display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+  }
+  
+  .product {
+    object-fit: cover;
+  width: 30em;
+    height: 30em;
+    border-radius: 70%;
+  }
+  
+  .rightside {
+    background-color: #ffffff;
+  width: 35rem;
+  border-bottom-right-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    padding: 1rem 2rem 3rem 3rem;
+  }
+  
+  p{
+    display:block;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: .8rem 0;
+  }
+  
+  .inputbox
+  {
+    color:#030303;
+  width: 60%;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1.5px solid #ccc;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+    font-family: 'Roboto', sans-serif;
+    color: #615a5a;
+    font-size: 1.1rem;
+    font-weight: 500;
+  outline:none;
+  }
+  
+  
+  .identite{
+    display:flex;
+    justify-content: space-between;
+    padding-top: 0.6rem;
+  }
+  
+  .button{
+    background: linear-gradient(
+  135deg
+  , #333a75 0%, #298096 100%);
+    padding: 8px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    width:30%;
+    letter-spacing: .11rem;
+    outline:none;
+  }
+
+  .button2{
+    background: linear-gradient(
+  135deg
+  , #333a75 0%, #298096 100%);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    width:30%;
+    letter-spacing: .11rem;
+    outline:none;
+  }
+  
+  .button:hover
+  {
+  transform: scale(1.05) translateY(-3px);
+    box-shadow: 3px 3px 6px #38373785;
+  }
+  
+  @media only screen and (max-width: 1000px) {
+    .card{
+        flex-direction: column;
+        width: auto;
+      
+    }
+  
+    .leftside{
+        width: 100%;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+      border-top-right-radius:0;
+      border-radius:0;
+    }
+  
+    .rightside{
+        width:auto;
+        border-bottom-left-radius: 1.5rem;
+        padding:0.5rem 3rem 3rem 2rem;
+      border-radius:0;
+    }
+  }
+
+
+
+/*************************--------PROGRESS BAR -----------------***************************/
+
+body {
+  font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
+  color: #404040;
+  background: #2a2a2a;
+}
+
+.container2 {
+  margin: 60px auto;
+  width: 400px;
+  text-align: center;
+}
+
+.container2 .progress {
+  margin: 0 auto;
+  width: 400px;
+}
+
+.progress {
+  padding: 4px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar {
+  height: 16px;
+  border-radius: 4px;
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  transition: 0.4s linear;
+  -webkit-transition-property: width, background-color;
+  -moz-transition-property: width, background-color;
+  -o-transition-property: width, background-color;
+  transition-property: width, background-color;
+  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/*
+ * Note: using adjacent or general sibling selectors combined with
+ *       pseudo classes doesn't work in Safari 5.0 and Chrome 12.
+ *       See this article for more info and a potential fix:
+ *       https://css-tricks.com/webkit-sibling-bug/
+ */
+
+
+#seventyfive:checked ~ .progress > .progress-bar {
+  width: 75%;
+  background-color: #f27011;
+}
+
+
+.radio {
+  display: none;
+}
+
+.label {
+  display: inline-block;
+  margin: 0 5px 20px;
+  padding: 3px 8px;
+  color: #aaa;
+  text-shadow: 0 1px black;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.radio:checked + .label {
+  color: white;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+  
+  /***********/
+
+  .leftsideDiv {
+    /*background: #862b2b;*/
+    width: 25rem;
+    display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    border-top-left-radius: 1.5rem;
+      border-bottom-left-radius: 1.5rem;
+  }
+  
+  .rightsideDiv {
+      /*background-color: #ffffff;*/
+    width: 35rem;
+    /*border-bottom-right-radius: 1.5rem;
+      border-top-right-radius: 1.5rem;
+      padding: 1rem 2rem 3rem 3rem;*/
+  
+      width: 25rem;
+    display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    border-top-right-radius: 1.5rem;
+      border-bottom-right-radius: 1.5rem;
+  }
+  
+  .cardDiv {
+    width: 60rem;
+      margin: auto;
+      /*background: white;*/
+      position:center;
+      align-self: center;
+      /*border-radius: 1.5rem;
+      box-shadow: 4px 3px 20px #3535358c;*/
+      display:flex;
+      flex-direction: row;
+      
+  }
+  
+
+  .buttonDivG{
+    background: linear-gradient(
+135deg
+, #db7235 0%, #e68639 100%);
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-left: 25%;
+    width:50%;
+    letter-spacing: .11rem;
+    outline:none;
+}
+
+
