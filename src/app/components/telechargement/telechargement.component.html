@@ -1,5 +1,13 @@
 <div class="mainscreen">
 
+   <div class="cardDiv">
+      <div class="leftsideDiv">
+        <button type="" class="buttonDiv" style="cursor: pointer" (click)="exportexcel()" >Télécharger les réponses</button>
+      </div>
+   </div>
+
+
+
    <div class="card">
 
      
@@ -15,7 +23,7 @@
             <th>Domaines de recherches</th>
             <th>Conclusion</th>
          </thead>    
-         <tbody *ngFor="let rep of reponses">
+         <tr *ngFor="let rep of reponses">
             <td>{{ rep.nom }}</td>  
             <td>{{ rep.prenom }}</td> 
             <td>{{ rep.email }}</td> 
@@ -25,13 +33,10 @@
             <td>{{ rep.numEntite }}</td> 
             <td><p *ngFor="let competences of rep.listeCompetences">{{competences}}</p></td> 
             <td>{{ rep.conclusion }}</td>        
-         </tbody> 
+         </tr> 
       </table>
 
-      <a style="cursor: pointer" (click)="exportexcel()">
-         <i class="fas fa-file-excel">Télécharger les réponses</i>
-       </a>
-       
+
       </div>
       
       
