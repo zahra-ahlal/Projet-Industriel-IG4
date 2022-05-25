@@ -68,37 +68,41 @@ export class OntologieComponent {
 
   selectedDomain = ""
   
-  domaines = ["SYNTHESE","E-Santé" ,
+  domaines = ["SYNTHESE","E Santé" ,
   "Physique","Chimie","Technologies Chimiques",
-  "Interactions organismes​","Observation Environnement​"]
+  "Interactions organismes​","Observation Environnement​","Test"]
 
   stringXml = `<?xml version="1.0" encoding="UTF-8"?>
-  <SYNTHESE>
-    <Chimiemoléculaire>
-      <Biomolécules>
-        <Acidesnucléiques>
-          <Amino></Amino>
-        </Acidesnucléiques>
-      </Biomolécules> 
-      <Polymères>
-      </Polymères>
-    </Chimiemoléculaire>
-  </SYNTHESE>`
+    <Données>
+      <SYNTHESE>
+      <Chimiemoléculaire>
+        <Biomolécules>
+          <Acidesnucléiques>
+            <Amino></Amino>
+          </Acidesnucléiques>
+        </Biomolécules> 
+        <Polymères>
+        </Polymères>
+      </Chimiemoléculaire>
+      </SYNTHESE>
+      <E-Santé><Physique></Physique></E-Santé>
+      
+      <Chimie></Chimie>
+      <Physique></Physique>
+      <Technologies-Chimiques>
+      <Interactions-organismes​></Interactions-organismes​>
+      </Technologies-Chimiques>
+      <Observation-Environnement></Observation-Environnement>
+    </Données>
+  `
 
   items:Array<any> = []
   xmlReady:any = parseXml(this.stringXml)
 
-  parsedFile : Array<any> = this.items = Array.from(this.xmlReady.querySelector("SYNTHESE").children).map((x:any,i)=>{
+  /*parsedFile : Array<any> = this.items = Array.from(this.xmlReady.querySelector("Données").children).map((x:any,i)=>{
     return x.tagName
-  })
-
-  // practical application
-  /*parseXml(){
-      console.log(this.xmlReady.querySelector("Chimiemoléculaire"));
-      console.log("FIN " + this.rechercheRec(this.items,"SYNTHESE"))
+  })*/
   
-      this.ref.detectChanges()
-  }*/
 
   rechercheRec(tab:any, filtre : String){
 
@@ -132,11 +136,16 @@ export class OntologieComponent {
 
   skills = [''];
 
-  liste = this.rechercheRec(this.items,"SYNTHESE")
+  liste = this.rechercheRec(this.items,"Données")
 
   addSkill(filtre: string) {
-    //test casse saisie
-    //console.log(this.stringXml);
+
+    if(filtre.includes(" ")){
+      var string = filtre.replace(/ /g,"-");
+      filtre = string;
+      //console.log("string" + filtre)
+    }
+    //console.log("filtre" + filtre)
   
     let liste = this.stringXml
     let s=filtre
