@@ -69,30 +69,30 @@ export class OntologieComponent {
   selectedDomain = ""
   
   domaines = ["SYNTHESE","E Santé" ,
-  "Physique","Chimie","Technologies Chimiques",
-  "Interactions organismes​","Observation Environnement​","Test"]
+  "Physique","Chimie","Technologies Chimiques"]
 
   stringXml = `<?xml version="1.0" encoding="UTF-8"?>
     <Données>
       <SYNTHESE>
-      <Chimiemoléculaire>
-        <Biomolécules>
-          <Acidesnucléiques>
-            <Amino></Amino>
-          </Acidesnucléiques>
-        </Biomolécules> 
-        <Polymères>
-        </Polymères>
-      </Chimiemoléculaire>
+        <Chimiemoléculaire>
+          <Biomolécules>
+            <Acidesnucléiques>
+              <Amino></Amino>
+            </Acidesnucléiques>
+          </Biomolécules> 
+          <Polymères>
+          </Polymères>
+        </Chimiemoléculaire>
       </SYNTHESE>
-      <E-Santé><Physique></Physique></E-Santé>
+      <E-Santé>
+        <Physique></Physique>
+      </E-Santé>
       
       <Chimie></Chimie>
-      <Physique></Physique>
       <Technologies-Chimiques>
-      <Interactions-organismes​></Interactions-organismes​>
+        <Interactions-organismes​></Interactions-organismes​>
       </Technologies-Chimiques>
-      <Observation-Environnement></Observation-Environnement>
+     
     </Données>
   `
 
